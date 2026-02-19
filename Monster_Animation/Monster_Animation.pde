@@ -1,17 +1,22 @@
 int monsterx;
 int monsterAngle;
+int vx;
 
 void setup(){
   size(600,600,P2D);
   monsterx=1;
+  vx=3;
 }
 void draw(){
   background(200);
   monster(monsterx,300,monsterAngle);
-  monsterx=monsterx+12;
-  monsterAngle=monsterAngle+10;
-  if(monsterx>700){
-    monsterx=-100;
+  monsterx=monsterx+vx;
+  monsterAngle = monsterAngle + vx;
+  if(monsterx>500){
+    vx = -5;
+  }
+  if(monsterx<100){
+    vx = 5;
   }
   
 }
@@ -20,6 +25,8 @@ void monster(int x, int y, int angle){
   pushMatrix(); //begin transformations
   
   translate(x,y);
+  
+  scale(1.25);
   
   rotate(radians(angle));
   
