@@ -7,6 +7,7 @@ final int GAMEOVER = 2;
 float x,y;
 int score, lives;
 float vx,vy;
+int highscore;
 
 void setup() {
   size(1000,800);

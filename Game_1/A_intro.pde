@@ -1,14 +1,16 @@
 void intro(){
   background(255,0,0);
   fill(255);
-  rect(400,400,200,100);
+  rect(width/2,height/2,200,100);
   fill(0);
   textSize(30);
-  text("START",400,400);
+  text("START",width/2,height/2);
 }
 
 void introClick(){
-  if (mouseX > 300 && mouseX< 500 && mouseY > 350 && mouseY < 450){
+  if (mouseX > width/2 -100 && mouseX< width/2 +100 && mouseY > height/2 -50 && mouseY < height/2 +50){
     mode = GAME;
+    lives = 3;
+    score = 0;
   }
 }

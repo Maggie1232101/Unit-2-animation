@@ -4,22 +4,21 @@ void game (){
   strokeWeight(5);
   ellipse(x,y,100,100);
   x = x+vx;
-  y = x+vy;
+  y = y+vy;
   fill(0);
   textSize(30);
   text("SCORE: " +score, width/2, 30);
   text("LIVES: " +lives, width/2, 60);
   
-  x = x+vx;
-  y = y + vy;
-  
-  if (x > width - 50 || x< 50){
+  if (x > width - 50 || x<50){
     vx = vx * -1;
     
   }
-  if (y > 750 || y <50){
+ 
+  if (y > height - 50 || y<50){
     vy = vy * -1;
   }
+  
 }
 
 void gameClick() {
