@@ -3,6 +3,7 @@ void intro(){
   fill(255);
   rect(400,400,200,100);
   fill(0);
+  textSize(30);
   text("START",400,400);
 }
 
