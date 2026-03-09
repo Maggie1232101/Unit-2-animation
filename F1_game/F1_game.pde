@@ -1,13 +1,17 @@
+import processing.sound.*;
 int lightStep = 0;
 int lastLightTime = 0;
 int goTime = 0;
 boolean lightsOut = false;
 float reactionTime = 0;
+float bestReaction = 999999;
 boolean started = false;
 boolean finished = false;
 boolean falseStart = false;
 int ra,rb,rc,rd,re;
 int randomDelay;
+SoundFile car;
+SoundFile buzz;
 
 final int INTRO = 1;
 final int GAME = 2;
@@ -24,6 +28,9 @@ void setup(){
   rc = 0;
   rd = 0;
   re = 0;
+  
+  car = new SoundFile(this, "soundreality-f1-151254.mp3");
+  buzz = new SoundFile(this, "rikk_nextsoft-error_sound-221445.mp3");
   
 }
 

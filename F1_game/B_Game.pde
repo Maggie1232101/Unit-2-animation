@@ -49,11 +49,15 @@ void game(){
 void gameClick(){
   if (!finished){
    if (!lightsOut){
+     buzz.play();
      falseStart = true;
      mode = GAMEOVER;
    }
    else {
      reactionTime = (millis() - goTime);
+     if (reactionTime<bestReaction){
+       bestReaction = reactionTime;
+     }
      finished = true;
      mode = GAMEOVER;
    }

@@ -1,7 +1,14 @@
 void gameover(){
   background(20);
   fill(255);
+  rect(width/2, height/2 +150,200,100);
+  fill(0);
+  textSize(30);
+  text("BACK TO HOME", width/2, height/2 +150);
+  fill(255);
+  
   textSize(40);
+  text("Best Reaction: " +bestReaction/1000.0, width/2, height/2 - 100);
   if (falseStart){
     text("FALSE START!", width/2, height/2);
   }
@@ -11,5 +18,8 @@ void gameover(){
 }
 
 void gameoverClick(){
+  if (mouseX > width/2 - 100 && mouseX<width/2+100 && mouseY>height/2+100 && mouseY<height/2+200){
+    mode = INTRO;
+  }
   
 }
