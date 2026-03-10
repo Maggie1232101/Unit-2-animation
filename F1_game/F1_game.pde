@@ -1,4 +1,6 @@
 import processing.sound.*;
+
+
 int lightStep = 0;
 int lastLightTime = 0;
 int goTime = 0;

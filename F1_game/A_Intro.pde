@@ -17,9 +17,13 @@ void intro(){
   ra = rb = rc = rd = re = 0;
   randomDelay = int(random(500,3000));
   
-  PFont F1 = createFont("edgeracer.ttf", 50);
+  
+  PFont F1 = createFont("edgeracer.ttf", 100);
+  fill(200,0,0);
   textFont(F1);
   text("F1", width/2, height/2 - 100);
+  PFont basic = createFont("First Bunny.otf",50);
+  textFont(basic);
   
 }
 
